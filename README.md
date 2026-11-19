@@ -1,6 +1,6 @@
 # Textbook Quant Models
 
-![tests](https://img.shields.io/badge/tests-43%20passing-brightgreen)
+![tests](https://img.shields.io/badge/tests-47%20passing-brightgreen)
 ![license](https://img.shields.io/badge/license-MIT-blue)
 ![python](https://img.shields.io/badge/python-3.11%2B-blue)
 ![release](https://img.shields.io/badge/release-v1.0.0-orange)
@@ -35,7 +35,7 @@ src/textbook_quant/
                         affine zero-coupon bond prices, simulators
 cases/                  one runnable case study per model (see cases/README.md)
 results/                the verified outputs the table above quotes
-tests/                  43 tests — closed-form identities, parameter recovery,
+tests/                  47 tests — closed-form identities, parameter recovery,
                         seeded Monte Carlo cross-checks
 ```
 
@@ -50,7 +50,14 @@ tests/                  43 tests — closed-form identities, parameter recovery,
 
 ```bash
 pip install -e .            # or: pip install numpy pandas scipy
-python -m pytest tests -q   # 43 tests
+python run.py               # one command, offline: all five models on the
+                            # cached NIFTY history + documented calibrations,
+                            # writes outputs/model_summary.csv and
+                            # outputs/bond_curve.csv (verified 19 Nov 2026:
+                            # regimes reproduce the table above — calm 11.74%
+                            # vol / 71.5-day duration, turbulent 35.42% /
+                            # 8.8 days; credit VaR99.9 at rho=0.30 is 19.98%)
+python -m pytest tests -q   # 47 tests
 python cases/jump_diffusion_case.py   # needs the NSE bhavcopy CSV (see cases/README.md)
 python cases/regimes_case.py          # uses the cached NIFTY history in cases/
 python cases/garch_case.py            # downloads ^NSEI via yfinance

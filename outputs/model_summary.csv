@@ -1,0 +1,13 @@
+model,quantity,value,detail
+merton_jump_diffusion,atm_call_price_3m,925.9401263892855,"S=K=23810.85, r=6.5%, BS(sigma=13.82%)=860.78, Merton premium over BS=+65.16"
+hamilton_regimes,calm_ann_vol_pct,11.741124233199747,"mu_ann=15.07%, expected_duration_days=71.5, stay_prob=0.9860"
+hamilton_regimes,turbulent_ann_vol_pct,35.42407025924897,"mu_ann=-39.01%, expected_duration_days=8.8, stay_prob=0.8862"
+hamilton_regimes,turbulent_share_pct,10.1956745623069,share of days with smoothed P(turbulent) > 0.5
+garch_family_garch,last_day_ann_vol_pct,15.084416171852293,"loglik=-3734.5, persistence=0.9762, params={'omega': 0.023693, 'alpha': 0.099258, 'beta': 0.876903}"
+garch_family_gjr,last_day_ann_vol_pct,12.210134873909292,"loglik=-3693.6, persistence=0.9644, params={'omega': 0.033672, 'alpha': 0.023255, 'gamma': 0.151946, 'beta': 0.86513}"
+garch_family_egarch,last_day_ann_vol_pct,13.537063471765286,"loglik=-3692.6, persistence=0.9669, params={'omega': -0.000533, 'alpha': 0.162487, 'gamma': -0.099374, 'beta': 0.966937}"
+credit_copula_vasicek,expected_loss_pct,1.2,"illustrative pool: 100 names, PD=2%, LGD=60%; EL is rho-invariant"
+credit_copula_vasicek,var999_pct_rho0.00,1.2,ES99=1.20%
+credit_copula_vasicek,var999_pct_rho0.10,7.694226437965391,ES99=6.13%
+credit_copula_vasicek,var999_pct_rho0.20,13.578768429348084,ES99=10.23%
+credit_copula_vasicek,var999_pct_rho0.30,19.979492056313784,ES99=14.57%
